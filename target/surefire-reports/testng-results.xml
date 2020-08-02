@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-07-26T11:03:19Z" name="Selenium_Docker_Test_Suite" finished-at="2020-07-26T11:03:40Z" duration-ms="20881">
+    <groups>
+    </groups>
+    <test started-at="2020-07-26T11:03:19Z" name="SeleniumDockerChromeTest" finished-at="2020-07-26T11:03:28Z" duration-ms="9347">
+      <class name="com.seleniumdockertest.SeleniumDockerTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@1817d444]" started-at="2020-07-26T16:33:19Z" name="setUp" finished-at="2020-07-26T16:33:23Z" duration-ms="3956" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getFooterLinkTest()[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@1817d444]" started-at="2020-07-26T16:33:23Z" name="getFooterLinkTest" finished-at="2020-07-26T16:33:25Z" duration-ms="2134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getFooterLinkTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@1817d444]" started-at="2020-07-26T16:33:25Z" name="tearDown" finished-at="2020-07-26T16:33:25Z" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@1817d444]" started-at="2020-07-26T16:33:25Z" name="setUp" finished-at="2020-07-26T16:33:28Z" duration-ms="2934" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getTitleTest()[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@1817d444]" started-at="2020-07-26T16:33:28Z" name="getTitleTest" finished-at="2020-07-26T16:33:28Z" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTitleTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@1817d444]" started-at="2020-07-26T16:33:28Z" name="tearDown" finished-at="2020-07-26T16:33:28Z" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.seleniumdockertest.SeleniumDockerTest -->
+    </test> <!-- SeleniumDockerChromeTest -->
+    <test started-at="2020-07-26T11:03:19Z" name="SeleniumDockerFFTest" finished-at="2020-07-26T11:03:40Z" duration-ms="20881">
+      <class name="com.seleniumdockertest.SeleniumDockerTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@291ae]" started-at="2020-07-26T16:33:19Z" name="setUp" finished-at="2020-07-26T16:33:25Z" duration-ms="6687" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getFooterLinkTest()[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@291ae]" started-at="2020-07-26T16:33:25Z" name="getFooterLinkTest" finished-at="2020-07-26T16:33:27Z" duration-ms="1565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getFooterLinkTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@291ae]" started-at="2020-07-26T16:33:27Z" name="tearDown" finished-at="2020-07-26T16:33:32Z" duration-ms="4666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@291ae]" started-at="2020-07-26T16:33:32Z" name="setUp" finished-at="2020-07-26T16:33:36Z" duration-ms="4241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getTitleTest()[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@291ae]" started-at="2020-07-26T16:33:36Z" name="getTitleTest" finished-at="2020-07-26T16:33:36Z" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTitleTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumdockertest.SeleniumDockerTest@291ae]" started-at="2020-07-26T16:33:36Z" name="tearDown" finished-at="2020-07-26T16:33:40Z" duration-ms="3650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.seleniumdockertest.SeleniumDockerTest -->
+    </test> <!-- SeleniumDockerFFTest -->
+  </suite> <!-- Selenium_Docker_Test_Suite -->
+</testng-results>
