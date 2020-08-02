@@ -8,8 +8,8 @@ services:
     ports:
       - "4444:4444"
 
-   opera:
-    image: selenium/node-opera:3.141.59-20200730
+    firefox:
+    image: selenium/node-firefox:3.141.59-20200730
     volumes:
       - /dev/shm:/dev/shm
     depends_on:
@@ -18,8 +18,8 @@ services:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
 
-  firefox:
-    image: selenium/node-firefox:3.141.59-20200730
+  opera:
+    image: selenium/node-opera:3.141.59-20200730
     volumes:
       - /dev/shm:/dev/shm
     depends_on:
