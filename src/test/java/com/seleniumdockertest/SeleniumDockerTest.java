@@ -12,8 +12,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -25,11 +27,11 @@ public class SeleniumDockerTest {
 	
 	public WebDriver driver;
 	
-	@BeforeTest
+	@BeforeClass
 	public void start() throws IOException, InterruptedException {
 		String[] cmd = { "/bin/sh", "-c", "cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job; ls -l;docker-compose up" };
 		Process p =Runtime.getRuntime().exec(cmd);
-	     p.waitFor(15, TimeUnit.SECONDS);
+	     p.waitFor(20, TimeUnit.SECONDS);
 	}
 
 	
@@ -69,7 +71,7 @@ public class SeleniumDockerTest {
 		for (WebElement links : footerLinks) {
 			System.out.println(links.getText());
 		}
-		Assert.assertEquals(footerLinks.size(), 30);
+		Assert.assertEquals(footerLinks.size(), 29);
 	}
 	
 	@AfterMethod
@@ -78,10 +80,10 @@ public class SeleniumDockerTest {
 	}
 	
 	
-	 @AfterTest 
+	 @AfterClass
 	 public void stop() throws IOException, InterruptedException {
 	 String[] cmd = { "/bin/sh", "-c","cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job; ls -l;docker-compose down"}; 
 	 Process p=Runtime.getRuntime().exec(cmd); 
-	 p.waitFor(15, TimeUnit.SECONDS);
+	 p.waitFor(20, TimeUnit.SECONDS);
 	  }
 }
