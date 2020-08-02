@@ -40,7 +40,7 @@ public class SeleniumDockerTest {
 	public void setUp(String browser) throws MalformedURLException {
 		
 		if(browser.equals("chrome")) {
-			WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
+			WebDriverManager.getInstance(DriverManagerType.CHROME).version("84").setup();
 			DesiredCapabilities capability = new DesiredCapabilities();
 			capability.setCapability("browserName", "chrome");
 			driver = new RemoteWebDriver(new URL("http://13.235.48.246:4444/wd/hub"), capability);
