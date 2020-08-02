@@ -7,8 +7,7 @@ services:
     container_name: selenium-hub
     ports:
       - "4444:4444"
-
-    firefox:
+  firefox:
     image: selenium/node-firefox:3.141.59-20200730
     volumes:
       - /dev/shm:/dev/shm
