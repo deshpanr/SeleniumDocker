@@ -32,7 +32,7 @@ public class SeleniumDockerTest {
 	public void start() throws IOException, InterruptedException {
 		String[] cmd = { "/bin/sh", "-c", "cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job; ls -l;docker-compose up" };
 		Process p =Runtime.getRuntime().exec(cmd);
-	     p.waitFor(20, TimeUnit.SECONDS);
+	     p.waitFor(60, TimeUnit.SECONDS);
 	}
 
 	
