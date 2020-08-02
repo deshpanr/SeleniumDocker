@@ -1,8 +1,10 @@
 package com.seleniumdockertest;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +13,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -20,6 +24,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class SeleniumDockerTest {
 	
 	public WebDriver driver;
+	
+	@BeforeTest
+	public void start() throws IOException, InterruptedException {
+		String[] cmd = { "/bin/sh", "-c", "cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job; ls -l;docker-compose up" };
+		Process p =Runtime.getRuntime().exec(cmd);
+	     p.waitFor(15, TimeUnit.SECONDS);
+	}
+
 	
 	@BeforeMethod
 	@Parameters("browser")
@@ -64,4 +76,12 @@ public class SeleniumDockerTest {
 	public void tearDown() {
 		driver.quit();
 	}
+	
+	/*
+	 * @AfterTest public void stop() throws IOException, InterruptedException {
+	 * String[] cmd = { "/bin/sh", "-c",
+	 * "cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job; ls -l;docker-compose down"
+	 * }; Process p=Runtime.getRuntime().exec(cmd); p.waitFor(15, TimeUnit.SECONDS);
+	 * }
+	 */
 }
