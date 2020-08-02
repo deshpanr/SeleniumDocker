@@ -8,8 +8,8 @@ services:
     ports:
       - "4444:4444"
 
-  chrome:
-    image: selenium/node-chrome:3.141.59-20200730
+   opera:
+    image: selenium/node-opera:3.141.59-20200730
     volumes:
       - /dev/shm:/dev/shm
     depends_on:
