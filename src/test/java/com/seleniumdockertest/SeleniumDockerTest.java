@@ -26,7 +26,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumDockerTest {
 	
-	public static WebDriver driver;
+	public static RemoteWebDriver driver;
 	
 	@BeforeClass
 	public void start() throws IOException, InterruptedException {
