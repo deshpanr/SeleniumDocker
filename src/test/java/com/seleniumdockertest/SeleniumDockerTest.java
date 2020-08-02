@@ -44,14 +44,14 @@ public class SeleniumDockerTest {
 			WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
 			DesiredCapabilities capability = new DesiredCapabilities();
 			capability.setCapability("browserName", "chrome");
-			driver = new RemoteWebDriver(new URL("http://13.127.37.148:4444/wd/hub"), capability);
+			driver = new RemoteWebDriver(new URL("http://13.235.48.246:4444/wd/hub"), capability);
 			
 	}
 		else if(browser.equals("firefox")) {
 			WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
 			DesiredCapabilities capability = new DesiredCapabilities();
 			capability.setCapability("browserName", "firefox");
-			driver = new RemoteWebDriver(new URL("http://13.127.37.148:4444/wd/hub"), capability);
+			driver = new RemoteWebDriver(new URL("http://13.235.48.246:4444/wd/hub"), capability);
 		}
 		
 		driver.manage().window().maximize();
