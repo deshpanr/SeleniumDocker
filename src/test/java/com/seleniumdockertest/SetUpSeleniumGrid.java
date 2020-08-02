@@ -9,14 +9,15 @@ public class SetUpSeleniumGrid {
 	
 	@BeforeTest
 	public void start() throws IOException, InterruptedException {
-		
-		Runtime.getRuntime().exec("start_selenium_grid_container.sh");
+		String[] cmd = { "/bin/sh", "-c", "cd /var; ls -l;docker-compose up" };
+		Runtime.getRuntime().exec(cmd);
 	     Thread.sleep(15000);
 	}
 	
 	@AfterTest
 	public void stop() throws IOException, InterruptedException {
-		Runtime.getRuntime().exec("stop_selenium_grid_container.sh");
+		String[] cmd = { "/bin/sh", "-c", "cd /var; ls -l;docker-compose down" };
+		Runtime.getRuntime().exec(cmd);
 	     Thread.sleep(15000);
 	}
 
