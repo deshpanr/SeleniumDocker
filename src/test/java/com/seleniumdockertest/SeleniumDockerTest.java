@@ -25,7 +25,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumDockerTest {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	
 	@BeforeClass
 	public void start() throws IOException, InterruptedException {
@@ -63,6 +63,7 @@ public class SeleniumDockerTest {
 		
 		String title =driver.getTitle();
 		Assert.assertEquals(title, "A fresh approach to customer engagement");
+		System.out.println("title: "+title);
 	}
 	
 	@Test
