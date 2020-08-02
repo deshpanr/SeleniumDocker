@@ -21,6 +21,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumDockerTest {
@@ -40,14 +41,14 @@ public class SeleniumDockerTest {
 	public void setUp(String browser) throws MalformedURLException {
 		
 		if(browser.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
 			DesiredCapabilities capability = new DesiredCapabilities();
 			capability.setCapability("browserName", "chrome");
 			driver = new RemoteWebDriver(new URL("http://13.127.37.148:4444/wd/hub"), capability);
 			
 	}
 		else if(browser.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
 			DesiredCapabilities capability = new DesiredCapabilities();
 			capability.setCapability("browserName", "firefox");
 			driver = new RemoteWebDriver(new URL("http://13.127.37.148:4444/wd/hub"), capability);
