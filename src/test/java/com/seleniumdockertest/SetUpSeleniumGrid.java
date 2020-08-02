@@ -10,7 +10,7 @@ public class SetUpSeleniumGrid {
 	@BeforeTest
 	public void start() throws IOException, InterruptedException {
 		
-		Runtime.getRuntime().exec("start start_selenium_grid_container.sh");
+		Runtime.getRuntime().exec("start_selenium_grid_container.sh");
 	     Thread.sleep(15000);
 	}
 	
