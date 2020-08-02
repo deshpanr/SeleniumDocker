@@ -10,13 +10,13 @@ public class SetUpSeleniumGrid {
 	@BeforeTest
 	public void start() throws IOException, InterruptedException {
 		
-		Runtime.getRuntime().exec("cmd /c start start_selenium_grid_container.sh");
+		Runtime.getRuntime().exec("start start_selenium_grid_container.sh");
 	     Thread.sleep(15000);
 	}
 	
 	@AfterTest
 	public void stop() throws IOException, InterruptedException {
-		Runtime.getRuntime().exec("cmd /c stop_selenium_grid_container.sh");
+		Runtime.getRuntime().exec("stop_selenium_grid_container.sh");
 	     Thread.sleep(15000);
 	}
 
