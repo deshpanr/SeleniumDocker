@@ -2,7 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name = "Selenium_Docker_Test_Suite" verbose ="1"  thread-count ="3" parallel ="tests">
-</test>
    <test name = "SeleniumDockerChromeTest">
    <parameter name ="browser"  value ="chrome"/>
       <classes>
@@ -15,5 +14,4 @@
          <class name = "com.seleniumdockertest.SeleniumDockerTest" />
       </classes>
    </test>
-  
 </suite>
