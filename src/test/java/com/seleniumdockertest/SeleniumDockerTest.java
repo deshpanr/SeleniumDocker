@@ -47,7 +47,7 @@ public class SeleniumDockerTest {
 			
 	}
 		else if(browser.equals("firefox")) {
-			WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
+			WebDriverManager.getInstance(DriverManagerType.FIREFOX).version("79").setup();
 			DesiredCapabilities capability = new DesiredCapabilities();
 			capability.setCapability("browserName", "firefox");
 			driver = new RemoteWebDriver(new URL("http://13.235.48.246:4444/wd/hub"), capability);
