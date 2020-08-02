@@ -1,1 +1,2 @@
-sh docker-compose up
+cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job
+docker-compose up
