@@ -42,7 +42,7 @@ public class SeleniumDockerTest {
 		if(browser.equals("opera")) {
 			WebDriverManager.operadriver().setup();
 			DesiredCapabilities capability = new DesiredCapabilities();
-			capability.setCapability("browserName", "chrome");
+			capability.setCapability("browserName", "opera");
 			driver = new RemoteWebDriver(new URL("http://13.235.48.246:4444/wd/hub"), capability);
 			
 	}
