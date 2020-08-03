@@ -1,17 +1,11 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "Selenium_Docker_Test_Suite" verbose ="1"  thread-count ="3" parallel ="tests">
-   <test name = "SeleniumDockerChromeTest">
-   <parameter name ="browser"  value ="opera"/>
+<suite name = "Selenium_Docker_Test_Suite" verbose ="1"  thread-count ="3" parallel ="Classes">
+   <test name = "SeleniumDockerTest">
       <classes>
-         <class name = "com.seleniumdockertest.SeleniumDockerTest" />
-      </classes>
-   </test>
-   <test name = "SeleniumDockerFFTest">
-   <parameter name ="browser"  value ="firefox"/>
-      <classes>
-         <class name = "com.seleniumdockertest.SeleniumDockerTest" />
+         <class name = "com.seleniumdockertest.SeleniumDockerFirefoxTest" />
+         <class name = "com.seleniumdockertest.SeleniumDockerOperaTest" />
       </classes>
    </test>
 </suite>
