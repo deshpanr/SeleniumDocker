@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
@@ -35,7 +36,9 @@ public class SeleniumDockerOperaTest {
 		WebDriverManager.operadriver().setup();
 		DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setCapability("browserName", "opera");
-		driver = new RemoteWebDriver(new URL("http://15.207.98.154:4444/wd/hub"), capability);
+		OperaOptions options = new OperaOptions();
+		options.merge(capability);
+		driver = new RemoteWebDriver(new URL("http://15.207.98.154:4444/wd/hub"), options);
 		driver.manage().window().maximize();
 		driver.get("https://www.freshworks.com/");
 
