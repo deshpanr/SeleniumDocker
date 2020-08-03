@@ -36,8 +36,8 @@ public class SeleniumDockerOperaTest {
 	}
 
 	
-	@BeforeMethod
-	public void setUp(String browser) throws MalformedURLException {
+	@BeforeTest
+	public void setUp() throws MalformedURLException {
 		
 		WebDriverManager.operadriver().setup();
 		DesiredCapabilities capability = new DesiredCapabilities();
@@ -65,7 +65,7 @@ public class SeleniumDockerOperaTest {
 		Assert.assertEquals(footerLinks.size(), 29);
 	}
 	
-	@AfterMethod
+	@AfterTest
 	public void tearDown() {
 		driver.quit();
 	}

@@ -36,7 +36,7 @@ public class SeleniumDockerFirefoxTest {
 	}
 
 	
-	@BeforeMethod
+	@BeforeTest
 	public void setUp() throws MalformedURLException {
 		
 		WebDriverManager.firefoxdriver().setup();
@@ -65,7 +65,7 @@ public class SeleniumDockerFirefoxTest {
 		Assert.assertEquals(footerLinks.size(), 29);
 	}
 	
-	@AfterMethod
+	@AfterTest
 	public void tearDown() {
 		driver.quit();
 	}
