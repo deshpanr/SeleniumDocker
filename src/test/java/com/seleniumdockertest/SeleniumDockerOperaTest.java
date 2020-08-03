@@ -26,7 +26,7 @@ import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumDockerOperaTest {
-	public RemoteWebDriver driver;
+	public static RemoteWebDriver driver;
 	
 	@BeforeClass
 	public void start() throws IOException, InterruptedException {
@@ -41,7 +41,6 @@ public class SeleniumDockerOperaTest {
 		
 		WebDriverManager.operadriver().setup();
 		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setPlatform(Platform.LINUX);
 		capability.setVersion("");
 		driver = new RemoteWebDriver(new URL("http://15.207.98.154:4444/wd/hub"), capability);
 		driver.manage().window().maximize();
