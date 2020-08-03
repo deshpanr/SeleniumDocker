@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "Selenium_Docker_Test_Suite" verbose ="1"  thread-count ="3" parallel ="Classes">
+<suite name = "Selenium_Docker_Test_Suite" verbose ="1"  thread-count ="3" parallel ="classes">
    <test name = "SeleniumDockerTest">
       <classes>
          <class name = "com.seleniumdockertest.SeleniumDockerFirefoxTest" />
