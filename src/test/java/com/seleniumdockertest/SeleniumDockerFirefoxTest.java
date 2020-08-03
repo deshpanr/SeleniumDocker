@@ -41,7 +41,7 @@ public class SeleniumDockerFirefoxTest {
 		
 		WebDriverManager.firefoxdriver().setup();
 		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setVersion("");
+		capability.setCapability("browserName", "firefox");
 		driver = new RemoteWebDriver(new URL("http://15.207.98.154:4444/wd/hub"), capability);
 		driver.manage().window().maximize();
 		driver.get("https://www.freshworks.com/");
