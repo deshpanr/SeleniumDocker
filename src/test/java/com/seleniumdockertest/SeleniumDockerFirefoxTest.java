@@ -29,14 +29,6 @@ public class SeleniumDockerFirefoxTest {
 	public static RemoteWebDriver driver;
 	
 	@BeforeClass
-	public void start() throws IOException, InterruptedException {
-		String[] cmd = { "/bin/sh", "-c", "cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job; ls -l;docker-compose up" };
-		Process p =Runtime.getRuntime().exec(cmd);
-	     p.waitFor(60, TimeUnit.SECONDS);
-	}
-
-	
-	@BeforeTest
 	public void setUp() throws MalformedURLException {
 		
 		WebDriverManager.firefoxdriver().setup();
@@ -65,16 +57,11 @@ public class SeleniumDockerFirefoxTest {
 		Assert.assertEquals(footerLinks.size(), 29);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}
 	
 	
-	  @AfterClass 
-	  public void stop() throws IOException, InterruptedException {
-	  String[] cmd = { "/bin/sh","-c","cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job; ls -l;docker-compose down"}; 
-	  Process p=Runtime.getRuntime().exec(cmd); 
-	  p.waitFor(20, TimeUnit.SECONDS);
-	 }
+	  
 }

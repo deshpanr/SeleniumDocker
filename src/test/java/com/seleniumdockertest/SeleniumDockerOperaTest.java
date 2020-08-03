@@ -27,16 +27,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumDockerOperaTest {
 	public static RemoteWebDriver driver;
-	
-	@BeforeClass
-	public void start() throws IOException, InterruptedException {
-		String[] cmd = { "/bin/sh", "-c", "cd /var/lib/jenkins/workspace/Git_Project_Checkout_Job; ls -l;docker-compose up" };
-		Process p =Runtime.getRuntime().exec(cmd);
-	     p.waitFor(60, TimeUnit.SECONDS);
-	}
 
 	
-	@BeforeTest
+	@BeforeClass
 	public void setUp() throws MalformedURLException {
 		
 		WebDriverManager.operadriver().setup();
@@ -65,7 +58,7 @@ public class SeleniumDockerOperaTest {
 		Assert.assertEquals(footerLinks.size(), 29);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}
