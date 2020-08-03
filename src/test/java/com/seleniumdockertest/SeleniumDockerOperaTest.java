@@ -41,6 +41,7 @@ public class SeleniumDockerOperaTest {
 		
 		WebDriverManager.operadriver().setup();
 		DesiredCapabilities capability = new DesiredCapabilities();
+		capability.setCapability("browserName", "opera");
 		driver = new RemoteWebDriver(new URL("http://15.207.98.154:4444/wd/hub"), capability);
 		driver.manage().window().maximize();
 		driver.get("https://www.freshworks.com/");
