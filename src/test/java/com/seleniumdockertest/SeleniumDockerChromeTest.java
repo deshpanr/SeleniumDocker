@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -26,18 +27,20 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SeleniumDockerOperaTest {
+public class SeleniumDockerChromeTest {
 	public static RemoteWebDriver driver;
 
 	
 	@BeforeClass
 	public void setUp() throws MalformedURLException {
 		
-		WebDriverManager.operadriver().setup();
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability("browserName", "opera");
-		OperaOptions options = new OperaOptions();
-		options.merge(capability);
+		WebDriverManager.chromedriver().setup();
+		//DesiredCapabilities capability = new DesiredCapabilities();
+		//capability.setCapability("browserName", "opera");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
 		driver = new RemoteWebDriver(new URL("http://15.207.98.154:4444/wd/hub"), options);
 		driver.manage().window().maximize();
 		driver.get("https://www.freshworks.com/");

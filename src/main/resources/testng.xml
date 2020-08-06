@@ -6,7 +6,7 @@
       <classes>
       <class name = "com.seleniumdockertest.SeleniumDockerGridSetUp" />
          <class name = "com.seleniumdockertest.SeleniumDockerFirefoxTest" />
-         <class name = "com.seleniumdockertest.SeleniumDockerOperaTest" />
+         <class name = "com.seleniumdockertest.SeleniumDockerChromeTest" />
       </classes>
    </test>
 </suite>
