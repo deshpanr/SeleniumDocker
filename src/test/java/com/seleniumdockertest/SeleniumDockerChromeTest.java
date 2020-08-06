@@ -41,7 +41,7 @@ public class SeleniumDockerChromeTest {
 		options.addArguments("--headless");
 		options.addArguments("--no-sandbox");
 		options.addArguments("--disable-dev-shm-usage");
-		driver = new RemoteWebDriver(new URL("http://15.207.98.154:4444/wd/hub"), options);
+		driver = new RemoteWebDriver(new URL("http://52.66.247.213:4444/wd/hub"), options);
 		driver.manage().window().maximize();
 		driver.get("https://www.freshworks.com/");
 
